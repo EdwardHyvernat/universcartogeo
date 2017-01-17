@@ -323,7 +323,24 @@ a:focus {
  background: #FCAC45;
  color: #ffffff;[/
 
+/* =========== Style Propos.html ========== */
+#propos_hub {
+	background: #FCAC45;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
 
+#propos_hub h3 {
+	color:white;
+	margin-left: 18px;
+}
+
+#propos {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
 
 
 
