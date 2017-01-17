@@ -342,6 +342,25 @@ a:focus {
 	margin-bottom: 80px;
 }
 
+]#f_Propos {
+	background: #384452;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	text-align: center;
+}
+
+#f_Propos h3 {
+	color: white;
+	font-size: 22px;
+	font-weight: 450;
+}
+
+
+#f_Propos p {
+	font-size: 20px;
+	color: #f2f2f2;	
+}
+
 
 
 
