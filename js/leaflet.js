@@ -15,8 +15,8 @@ var Marqueur = L.Icon.extend({
 	}
 });
 //Collection de marqueurs
-var marqueurRouge = new Marqueur({iconUrl: "img/leaflet/marqueur_rouge-01.png"}),
-    marqueurViolet = new Marqueur({iconUrl: "img/leaflet/marqueur_violet-01.png"});
+var marqueurRouge = new Marqueur({iconUrl: "../img/leaflet/marqueur_rouge-01.png"}),
+    marqueurViolet = new Marqueur({iconUrl: "../img/leaflet/marqueur_violet-01.png"});
 //Localisation des marqueurs	
 var marker = L.marker([49.04211, 1.57195], {icon: marqueurRouge}).addTo(mymap)
 	marker.bindPopup("<b>Résidence</b><br/>7 rue de la charrière - 78270 Bennecourt.").openPopup;
