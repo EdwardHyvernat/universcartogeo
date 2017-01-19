@@ -22,6 +22,10 @@
         <link rel="stylesheet" href="../css/main.css">
         <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 		
+		<!-- Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+		
 		<!-- Old Browser -->
 		<!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -54,12 +58,18 @@
 			</div>
 		</div>
 		
+	<!-- début de la carte Leaflet -->
+	<div id="mapblog"></div>
+    <!-- fin de la carte Leaflet -->
+		
 	<!-- Script Javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script>
 		<script src="../js/bootstrap.js"></script>
+		<script src="../js/leaflet_blog.js"></script>
+		<!-- <script src="../js/leaflet.js"></script> -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
