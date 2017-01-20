@@ -43,40 +43,34 @@ var infoDiv = document.getElementById("commentairescarto");
 infoDiv.innerHTML = "<p> Fond de plan cadastre IGN sur client Leaflet JS (" + Gp.leafletExtDate + ")</p>";
 */
 
-function go() {
-    map = L.map("mapblog").setView([48.9, 2.5], 13);
-    var lyrOSM= L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?') ;
-    var lyrOrtho = L.geoportalLayer.WMTS({
-        layer: "ORTHOIMAGERY.ORTHOPHOTOS",
-    });
-    var lyrMaps = L.geoportalLayer.WMTS({
-        layer: "GEOGRAPHICALGRIDSYSTEMS.MAPS",
-    }, { // leafletParams
-        opacity: 0.7
-    });
-
+function go()
+{
+    map = L.map("mapblog").setView([48.9, 2.2], 10);
+	var lyrMarine = L.geoportalLayer.WMS({layer: "SCANLITTO_PYR-JPEG_WLD_WM"})
+	var lyrOrtho = L.geoportalLayer.WMTS({layer: "ORTHOIMAGERY.ORTHOPHOTOS"});
+	var lyrMaps = L.geoportalLayer.WMTS({layer: "GEOGRAPHICALGRIDSYSTEMS.MAPS"}, {opacity: 0.7});
+    var lyrOSM= L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?') ;    
+	var lyrCadastre = L.geoportalLayer.WMTS({layer: "CADASTRALPARCELS.PARCELS"});
+	map.addLayer(lyrMarine);
     map.addLayer(lyrOrtho);
-    map.addLayer(lyrOSM) ;
-    map.addLayer(lyrMaps) ;
-	var searchCtrl = L.geoportalControl.SearchEngine({});
-		map.addControl(searchCtrl);
-    var layerSwitcher = L.geoportalControl.LayerSwitcher({
-    	layers : [{
-        	layer : lyrOSM,
-            config : {
-            	title : "OSM",
-                description : "Couche Open Street Maps"
-            }
-        }]
-    });
-	map.addControl(layerSwitcher);
+    map.addLayer(lyrMaps);
+    map.addLayer(lyrOSM);
+	map.addLayer(lyrCadastre);
 	
+	var searchCtrl = L.geoportalControl.SearchEngine({});
+	var layerSwitcher = L.geoportalControl.LayerSwitcher({layers : [
+																	{layer : lyrMarine, config : {visibility : false}},
+																	{layer : lyrOrtho, config : {visibility : false}},
+																	{layer : lyrMaps, config : {visibility : false}},
+																	{layer : lyrOSM, config : {title : "OSM", description : "Couche Open Street Maps"}},
+																	{layer : lyrCadastre, config : {visibility : false}}
+																   ]
+														 });
+	map.addControl(searchCtrl);
+	map.addControl(layerSwitcher);
 }
 
-Gp.Services.getConfig({
-    apiKey : "9cxflgtlfpitopej4q3x9wby",
-    onSuccess : go
-}) ;
+Gp.Services.getConfig({apiKey : "9cxflgtlfpitopej4q3x9wby", onSuccess : go}) ;
 
 var infoDiv= document.getElementById("commentairescarto") ;
-infoDiv.innerHTML= "<p> Carte multi-couches WMS IGN  ("+Gp.leafletExtDate+")</p>" ;
+infoDiv.innerHTML= "<p> Carte multi-couches WMTS IGN  ("+Gp.leafletExtDate+")</p>" ;
