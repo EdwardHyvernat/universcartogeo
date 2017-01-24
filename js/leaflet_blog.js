@@ -70,7 +70,7 @@ function go()
 	map.addControl(layerSwitcher);
 }
 
-Gp.Services.getConfig({apiKey : "9cxflgtlfpitopej4q3x9wby", onSuccess : go}) ;
+Gp.Services.getConfig({apiKey : "9aybpgi4ooln71glz8fmj852", onSuccess : go}) ;
 
 var infoDiv= document.getElementById("commentairescarto") ;
 infoDiv.innerHTML= "<p> Carte multi-couches WMTS IGN  ("+Gp.leafletExtDate+")</p>" ;
