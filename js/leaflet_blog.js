@@ -43,8 +43,8 @@ var infoDiv = document.getElementById("commentairescarto");
 infoDiv.innerHTML = "<p> Fond de plan cadastre IGN sur client Leaflet JS (" + Gp.leafletExtDate + ")</p>";
 */
 
-//function go()
-//{
+function go()
+{
     map = L.map("mapblog").setView([48.9, 2.2], 10);
 	var lyrMarine = L.geoportalLayer.WMS({layer: "SCANLITTO_PYR-JPEG_WLD_WM"})
 	var lyrOrtho = L.geoportalLayer.WMTS({layer: "ORTHOIMAGERY.ORTHOPHOTOS"});
@@ -68,9 +68,9 @@ infoDiv.innerHTML = "<p> Fond de plan cadastre IGN sur client Leaflet JS (" + Gp
 														 });
 	map.addControl(searchCtrl);
 	map.addControl(layerSwitcher);
-//}
+}
 
-//Gp.Services.getConfig({apiKey : "9aybpgi4ooln71glz8fmj852", onSuccess : go}) ;
+Gp.Services.getConfig({apiKey : "9aybpgi4ooln71glz8fmj852", onSuccess : go}) ;
 
 var infoDiv= document.getElementById("commentairescarto") ;
 infoDiv.innerHTML= "<p> Carte multi-couches WMTS IGN  ("+Gp.leafletExtDate+")</p>" ;
