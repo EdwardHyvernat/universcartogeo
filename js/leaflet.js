@@ -1,3 +1,4 @@
+//**CARTE 1**
 //var mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
 //var mbUrl = 'https://api.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpbG10dnA3NzY3OTZ0dmtwejN2ZnUycjYifQ.1W5oTOnWXQ9R1w8u3Oo1yA'
 var mbUrl = 'http://api.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpbTgzcHQxMzAxMHp0eWx4bWQ1ZHN2NGcifQ.WVwjmljKYqKciEZIC3NfLA'
@@ -41,3 +42,22 @@ var couche = {
 				             };
 
 L.control.layers(fond_plan, couche).addTo(map);
+
+//**CARTE 2**
+var map;
+require(["esri/map", "esri/dijit/BasemapGallery", "esri/arcgis/utils", "dojo/parser", "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dijit/TitlePane", "dojo/domReady!"], 
+function( Map, BasemapGallery, arcgisUtils, parser)
+		{
+		 parser.parse();
+		 map = new Map("mapArcgis", {basemap: "topo", center: [-1.8, 48.7], zoom: 10});
+
+		 //add the basemap gallery, in this case we'll display maps from ArcGIS.com including bing maps
+		 var basemapGallery = new BasemapGallery({showArcGISBasemaps: true, map: map}, "basemapGallery");
+		 basemapGallery.startup();
+         basemapGallery.on("error", function(msg) {console.log("basemap gallery error:  ", msg);});
+        });
+
+
+
+  
+

@@ -273,7 +273,7 @@ a:focus {
  tex-align: center; 
 }
 
-/* Leaflet */
+/* Leaflet Accueil*/
 #mapid {
  
  width: 90%;
@@ -293,6 +293,21 @@ a:focus {
     -o-background-size: cover;
     background-size: cover;
 }
+
+ 
+ 
+     
+/* ArcGIS */
+#mapArcgis {
+ width: 90%;
+ height: 500px;
+ margin-top: 10px;
+ margin-left: auto;
+ margin-right: auto;
+ box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+ } 
+	 
+/* Leaflet Blog*/
 #mapblog {
  
  width: 90%;

@@ -25,6 +25,12 @@
 	<!-- Leaflet -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+	
+	<!-- ArcGIS -->
+	<link rel="stylesheet" href="https://js.arcgis.com/3.19/dijit/themes/claro/claro.css">
+	<link rel="stylesheet" href="https://js.arcgis.com/3.19/esri/css/esri.css">
+	<script src="https://js.arcgis.com/3.19/"></script>
+	
 		
     </head>
     <body>
@@ -91,7 +97,32 @@
 	<!-- début de la carte Leaflet -->
 	<div id="mapid"></div>
     <!-- fin de la carte Leaflet -->
+	
 	<br/>
+	
+	<!-- début de la carte ArcGIS -->
+	<div id="mapArcgis">
+	<div class="claro">
+	<div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false" style="width:100%;height:100%;margin:0;">
+    <div id="mapArcgis" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0;">
+    <div style="position:absolute; right:20px; top:10px; z-Index:999;">
+    <div data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Switch Basemap', closable:false, open:false">
+    <div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
+    <div id="basemapGallery">
+	</div>
+    </div>
+    </div>
+    </div>
+    </div>
+	</div>
+	</div>
+	</div>
+	
+ 
+    <!-- fin de la carte ArcGIS -->
+	
+	<br/>
+	
   <div>
    <div class="container">
     <div class="row centered">
