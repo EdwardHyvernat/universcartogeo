@@ -299,6 +299,18 @@ a:focus {
      
 /* ArcGIS */
 #mapArcgis {
+ padding: 0;	
+ width: 90%;
+ height: 500px;
+ margin-top: 10px;
+ margin-left: auto;
+ margin-right: auto;
+ box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+ } 
+ 
+ /* ArcGIS 2*/
+#mapArcgis2 {
+ padding: 0;	
  width: 90%;
  height: 500px;
  margin-top: 10px;

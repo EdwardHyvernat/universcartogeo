@@ -27,10 +27,9 @@
 	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 	
 	<!-- ArcGIS -->
-	<link rel="stylesheet" href="https://js.arcgis.com/3.19/dijit/themes/claro/claro.css">
 	<link rel="stylesheet" href="https://js.arcgis.com/3.19/esri/css/esri.css">
-	<script src="https://js.arcgis.com/3.19/"></script>
-	
+	<link href="http://services.esrifrance.fr/ressources/ESRI.ArcGIS.Rest.css" rel='stylesheet' type='text/css'>
+	<link href="http://services.esrifrance.fr/ressources/arcgis_js_v30_api/arcgis_js_api/library/3.0/jsapi/js/dojo/dijit/themes/tundra/tundra.css" rel='stylesheet' type='text/css'>
 		
     </head>
     <body>
@@ -102,24 +101,16 @@
 	
 	<!-- début de la carte ArcGIS -->
 	<div id="mapArcgis">
-	<div class="claro">
-	<div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false" style="width:100%;height:100%;margin:0;">
-    <div id="mapArcgis" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0;">
-    <div style="position:absolute; right:20px; top:10px; z-Index:999;">
-    <div data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Switch Basemap', closable:false, open:false">
-    <div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
-    <div id="basemapGallery">
+    <div id="basemapGallery">		
 	</div>
-    </div>
-    </div>
-    </div>
-    </div>
-	</div>
-	</div>
-	</div>
-	
- 
+	</div>   
     <!-- fin de la carte ArcGIS -->
+	
+	<br/>
+	
+	<!-- début de la carte ArcGIS2 -->
+	<div id="mapArcgis2"></div>   
+    <!-- fin de la carte ArcGIS2 -->
 	
 	<br/>
 	
@@ -128,19 +119,19 @@
     <div class="row centered">
      <div class="col-md-4">
       <i class="fa fa-heart"></i>
-      <h4>Amoureux de la technologie</h4>
+      <h4>la cartographie</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
       <p><br/><a href="#" class="btn btn-theme">En savoir plus</a></p>
      </div>
      <div class="col-md-4">
        <i class="fa fa-flask"></i>
-       <h4>Chercher l'innovation</h4>
+       <h4>la manipulation des données</h4>
        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
        <p><br/><a href="#" class="btn btn-theme">En savoir plus</a></p>
       </div>
       <div class="col-md-4">
        <i class="fa fa-trophy"></i>
-       <h4>Réussir et partager</h4>
+       <h4>La diffusion</h4>
        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
        <p><br/><a href="#" class="btn btn-theme">En savoir plus</a></p>
       </div>
@@ -202,11 +193,13 @@
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src="https://js.arcgis.com/3.19/"></script>
+		<script type="text/javascript" src="http://services.esrifrance.fr/ressources/arcgis_js_v30_api/arcgis_js_api/library/3.0/jsapi/"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/leaflet.js"></script>
-
+		
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
