@@ -26,10 +26,14 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 	
+	<!-- Mapbox -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheetmb' />
+	
 	<!-- ArcGIS -->
 	<link rel="stylesheet" href="https://js.arcgis.com/3.19/esri/css/esri.css">
-	<link href="http://services.esrifrance.fr/ressources/ESRI.ArcGIS.Rest.css" rel='stylesheet' type='text/css'>
-	<link href="http://services.esrifrance.fr/ressources/arcgis_js_v30_api/arcgis_js_api/library/3.0/jsapi/js/dojo/dijit/themes/tundra/tundra.css" rel='stylesheet' type='text/css'>
+	<link href="http://services.esrifrance.fr/ressources/ESRI.ArcGIS.Rest.css" rel='stylesheetesri' type='text/css'>
+	<link href="http://services.esrifrance.fr/ressources/arcgis_js_v30_api/arcgis_js_api/library/3.0/jsapi/js/dojo/dijit/themes/tundra/tundra.css" rel='stylesheetesri' type='text/css'>
 		
     </head>
     <body>
@@ -56,6 +60,7 @@
 						<li><a href="index.html">Accueil</a></li>
 						<li><a href="pages/Blog.html">Blog</a></li>
 						<li><a href="pages/Realisations.html">Réalisations</a></li>
+						<li><a href="pages/Cartographie JS.html">Cartographie JS</a></li>
 						<li><a href="pages/Propos.html">A Propos</a></li>
 						<li><a href="pages/Contact.html">Contact</a></li>
 					</ul>
@@ -193,12 +198,15 @@
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js'></script>
 		<script src="https://js.arcgis.com/3.19/"></script>
 		<script type="text/javascript" src="http://services.esrifrance.fr/ressources/arcgis_js_v30_api/arcgis_js_api/library/3.0/jsapi/"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/leaflet.js"></script>
+		
+		<link rel='stylesheetmb' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css' type='text/css' />
 		
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

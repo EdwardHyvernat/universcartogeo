@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>UCG / Cartographie JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+
+		<!-- BootStrap Core -->
+		<link href="../css/bootstrap_universcartogeo.css" rel="stylesheet">
+		
+		<!-- Custom style -->
+		<!-- ancien fichier css remplaçé par le less de BootStrap
+		<link href="../css/main.css" rel="stylesheet"> -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+		
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+		
+		<!-- Old Browser -->
+		<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    </head>
+	
+	<body>
+		
+		<!-- Navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="../index.html">Edouard Hyvernat - Cartographe</a>	
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="../index.html">Accueil</a></li>
+						<li><a href="Blog.html">Blog</a></li>
+						<li><a href="Realisations.html">Realisations</a></li>
+						<li><a href="Cartographie JS.html">Cartographie JS</a></li>
+						<li><a href="Propos.html">A Propos</a></li>
+						<li><a href="Contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Carto Leaflet -->
+		<div id="mapleaflet"></div>
+		
+		<!-- Script Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+		<script src="../js/bootstrap.js"></script>
+		<script src="../js/cartojs_leaflet.js"></script>
+		<script src="../data/perim_epfif.js"></script>
+		       
+    </body>
+</html>
