@@ -20,7 +20,8 @@
 		
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<link rel="stylesheet" href="../css/GpPluginLeaflet.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
 		<script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 		
 		<!-- Old Browser -->
@@ -59,15 +60,44 @@
 		<!-- Carto Leaflet -->
 		<div id="mapleaflet"></div>
 		
+		<!-- début de la carte Leaflet -->
+	<div id="mapblog"></div>
+	<div id="commentairescarto"></div>
+    <!-- fin de la carte Leaflet -->
+		
+		<!-- début de la carte Leaflet -->
+		<div id="mapid"></div>
+		<!-- fin de la carte Leaflet -->
+	
+	<br/>
+	
+		<!-- début de la carte ArcGIS -->
+		<div id="mapArcgis">
+		<div id="basemapGallery">		
+		</div>
+		</div>   
+		<!-- fin de la carte ArcGIS -->
+	
+	<br/>
+	
+		<!-- début de la carte ArcGIS2 -->
+		<div id="mapArcgis2"></div>   
+		<!-- fin de la carte ArcGIS2 -->
+		
 		<!-- Script Javascript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+		<script src="../js/GpPluginLeaflet.js" data-url="../autoconf.json"></script>
+		<script src="../js/leaflet_blog.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script>
 		<script src="../js/bootstrap.js"></script>
 		<script src="../js/cartojs_leaflet.js"></script>
 		<script src="../data/perim_epfif.js"></script>
+		<script src="https://js.arcgis.com/3.19/"></script>
+		<script type="text/javascript" src="http://services.esrifrance.fr/ressources/arcgis_js_v30_api/arcgis_js_api/library/3.0/jsapi/"></script>
+		<script src="../js/leaflet.js"></script>
 		       
     </body>
 </html>
