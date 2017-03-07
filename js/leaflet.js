@@ -62,15 +62,6 @@ function( Map, BasemapGallery, arcgisUtils, parser)
          basemapGallery.on("error", function(msg) {console.log("basemap gallery error:  ", msg);});
         });
 
-//**CARTE 3**
-var map;
-require(["esri/map", "esri/layers/ArcGISTiledMapServiceLayer", "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"],
-function (Map, ArcGISTiledMapServiceLayer ) {
-    map = new Map("mapArcgis2"); 
-	//var t = 'exJB7kxJ3jWZAU90F89qOGkgnJrKl6*ghtnYp0y2L6nfwBAfBlfhaZFinNBqBjmQkPZcoml0jLyNs6L94AvCVhsR7XaEeW4*TLIu7zdoj3ay4NSjJ' + 'wwny4zujHyK4h6pJJjpm25qtbKjLCSHOPxv5ckq8dh8TeLaekNye5nnHCDjVsWZp33hHu' + 'JEhvdZT5V9csQpXUZAuU72*2H.hBXWq' + 'Q-' + '-';
-    var shom = new ArcGISTiledMapServiceLayer("http://services.esrifrance.fr/arcgis/rest/services/SHOM/France_RasterMarine/MapServer?token=exJB7kxJ3jWZAU90F89qOGkgnJrKl6*ghtnYp0y2L6nfwBAfBlfhaZFinNBqBjmQkPZcoml0jLyNs6L94AvCVhsR7XaEeW4*TLIu7zdoj3ay4NSjJwwny4zujHyK4h6pJJjpm25qtbKjLCSHOPxv5ckq8dh8TeLaekNye5nnHCA*32cb.0mxEcFIBdQOzSAOe5br8EIPyt9MjJYHlKEP.A--");
-    map.addLayer(shom);
-});
 
   
 
