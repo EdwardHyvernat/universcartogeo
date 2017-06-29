@@ -9,38 +9,23 @@ var gris     		  = L.tileLayer(mbUrl, {id: 'mapbox.light'}),
 	satellite		  = L.tileLayer(mbUrl, {id:	'mapbox.satellite'}),
 	sport             = L.tileLayer(mbUrl, {id: 'mapbox.run-bike-hike'});
 
-var vertIcon = L.icon({
-    iconUrl: "../img/leaflet/marqueur_vert.png",
-    iconSize:     [25, 41],
-	iconAnchor: [12, 41],
-    popupAnchor: [0, -41]
-});	
-
-var bleuIcon = L.icon({
-    iconUrl: "../img/leaflet/marqueur_bleu.png",
-    iconSize:     [25, 41],
-	iconAnchor: [12, 41],
-    popupAnchor: [0, -41]
-});
-
-var rougeIcon = L.icon({
-    iconUrl: "../img/leaflet/marqueur_rouge.png",
-    iconSize:     [25, 41],
-	iconAnchor: [12, 41],
-    popupAnchor: [0, -41]
-});
-
-var violetIcon = L.icon({
-    iconUrl: "../img/leaflet/marqueur_violet.png",
-    iconSize:     [25, 41],
-	iconAnchor: [12, 41],
-    popupAnchor: [0, -41]
+var LeafIcon = L.Icon.extend({
+	options: {
+		iconSize:   [25, 41],
+		iconAnchor: [12, 41],
+		popupAnchor:[0, -41] 
+	}
 });
 	
-var rouge = new L.LayerGroup();
-var violet = new L.LayerGroup();
-var vert = new L.LayerGroup();
-var bleu = new L.LayerGroup();
+var vertIcon   = new LeafIcon({iconUrl: "../img/leaflet/marqueur_vert.png"}),
+	bleuIcon   = new LeafIcon({iconUrl: "../img/leaflet/marqueur_bleu.png"}),
+	rougeIcon  = new LeafIcon({iconUrl: "../img/leaflet/marqueur_rouge.png"}),
+	violetIcon = new LeafIcon({iconUrl: "../img/leaflet/marqueur_violet.png"});
+	
+var rouge = new L.LayerGroup(),
+	violet = new L.LayerGroup(),
+	vert = new L.LayerGroup(),
+	bleu = new L.LayerGroup();
 
 L.marker([49.04211, 1.57195] ,{icon: rougeIcon}).bindPopup('Résidence').addTo(rouge),
 L.marker([48.83102, 2.34052] ,{icon: violetIcon}).bindPopup('Travail').addTo(violet),
