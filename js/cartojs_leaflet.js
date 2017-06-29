@@ -34,7 +34,7 @@ L.marker([49.6498, 0.92926]  ,{icon: vertIcon}).bindPopup('Vie privée').addTo(v
 L.marker([48.84466, 2.34258] ,{icon: bleuIcon}).bindPopup('Etudes').addTo(bleu);
 
 		
-var carto = L.map('mapleaflet', {center: [49, 1], zoom: 7, layers: [streets, rouge, violet, vert, bleu]});
+var carto = L.map('mapleaflet', {center: [49, 1], zoom: 7, layers: [emerald, rouge, violet, vert, bleu]});
 
 
 
